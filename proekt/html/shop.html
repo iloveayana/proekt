@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/ui.css">
+    <link rel="stylesheet" href="../css/shop.css">
+
+    <link rel="shortcut icon" href="../icons/logotip.svg" type="image/x-icon">
+    <title>ROOM - Furniture Store</title>
+</head>
+
+<body>
+    <header class="header">
+        <div class="header__container container">
+            <div class="logo">
+                <a href="../html/index.html"><img src="../icons/logotip.svg" alt=""></a>
+            </div>
+            <ul class="header__menu">
+                <li><a href="../html/index.html">Home</a></li>
+                <li><a href="../html/aboutus.html">About us</a></li>
+                <li><a href="../html/shop.html" style="color: cornflowerblue;">Shop</a></li>
+            </ul>
+            <div class="logo__two">
+                <a href="https://goo.gl/maps/hkCA7QPTFWRxNzmJA" target="_blank"><img src="../icons/position.svg"
+                        alt=""></a>
+                <h1 class="header__title">showrooms</h1>
+                <a href="../html/index.html"><img src="../icons/shop.svg" alt=""></a>
+            </div>
+            <button class="icon-burger">
+                <img src="../icons/burgermenu.png" alt="">
+            </button>
+            <div class="header__list sub-menu">
+                <ul class="sub-menu__list">
+                    <li class="sub-menu__item"><a href="#" style="color: cornflowerblue;">Home</a></li>
+                    <li class="sub-menu__item"><a href="../html/aboutus.html">About us</a></li>
+                    <li class="sub-menu__item"><a href="../html/shop.html">Shop</a></li>
+                </ul>
+                <div class="sub-menu__actions actions-header">
+                    <div class="actions-header__icons">
+                        <a href="https://goo.gl/maps/hkCA7QPTFWRxNzmJA" target="_blank"><img src="../icons/position.svg"
+                                alt=""></a>
+                        <a href="../html/shop.html"><img src="../icons/shop.svg" alt=""></a>
+                    </div>
+                    <h1 class="header__title">showrooms</h1>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main class="wrapper">
+        <section class="item__wrapper">
+            <div class="item__container container">
+                <div class="first-row">
+                    <h1 class="item__title">
+                        Your Bag
+                    </h1>
+                    <p class="item__subtitle">
+                        Choose your room
+                    </p>
+                    <div class="all">
+                        <input checked type="radio" name="respond" id="desktop">
+                        <article id="slider">
+                            <input checked type="radio" name="slider" id="switch1">
+                            <input type="radio" name="slider" id="switch2">
+                            <input type="radio" name="slider" id="switch3">
+                            <input type="radio" name="slider" id="switch4">
+                            <input type="radio" name="slider" id="switch5">
+                            <div id="slides">
+                                <div id="overflow">
+                                    <div class="image">
+                                        <article><img src="../icons/productfirst.png"></article>
+                                        <article><img src="../icons/producttwo.png"></article>
+                                        <article><img src="../icons/productthird.png"></article>
+                                        <article><img src="../icons/productfour.png"></article>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="controls">
+                                <label for="switch1"></label>
+                                <label for="switch2"></label>
+                                <label for="switch3"></label>
+                                <label for="switch4"></label>
+                            </div>
+                            <div id="active">
+                                <label for="switch1"></label>
+                                <label for="switch2"></label>
+                                <label for="switch3"></label>
+                                <label for="switch4"></label>
+                            </div>
+                        </article>
+                    </div>
+                    <p class="item__subtitle" style="color: black;">1200$</p>
+                    <label class="for__checkbox">
+                        <input type="checkbox" checked="checked">
+                        <div class="line"></div>
+                        <div class="line line-indicator"></div>
+                    </label>
+                    <p class="item__subtitle" style="color: red;">not available</p>
+                </div>
+                <div class="for-input">
+                    <input type="text" placeholder="address" required>
+                    <input type="email" placeholder="email" required>
+                    <input type="number" placeholder="phone number" required>
+                    <form><input type="submit"></form>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="footer__container container">
+            <div class="logo">
+                <a href="../html/index.html"><img class="footer__img" src="../icons/Rectangle (6).svg" alt=""></a>
+            </div>
+            <div>
+                <ul class="footer__menu">
+                    <li><a href="../html/index.html">Home</a></li>
+                    <li><a href="../html/aboutus.html">About us</a></li>
+                    <li><a href="../html/shop.html">Shop</a></li>
+                </ul>
+            </div>
+            <div class="footer__apps">
+                <h1>follow us</h1>
+                <div class="apps">
+                    <div class="column__apps">
+                        <img class="footer__img" src="../icons/instagram.svg" alt="">
+                        <img class="footer__img" src="../icons/pinterest.svg" alt="">
+                    </div>
+                    <div class="column__apps">
+                        <img class="footer__img" src="../icons/facebook.svg" alt="">
+                        <img class="footer__img" src="../icons/in.svg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="../js/index.js"></script>
+
+</body>
+
+</html>

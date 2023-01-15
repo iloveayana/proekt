@@ -1,0 +1,287 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300&family=Raleway:wght@300&family=Roboto:wght@300&family=Secular+One&display=swap');
+*{  
+    padding: 0;  
+    margin: 0;  
+    box-sizing: border-box;  
+    list-style-type: none;  
+    outline: none;  
+    text-decoration: none;  
+}  
+#slider { /*положение слайдера*/
+    position: relative;
+	text-align: center;
+    top: 10px;
+}
+
+#slider{ /*центровка слайдера*/
+	margin: 0 auto;
+}
+
+#slides article{ /*все изображения справа друг от доруга*/
+	width: 20%;
+	float: left;
+}
+
+#slides .image{ /*устанавливает общий размер блока с изображениями*/
+	width: 500%;
+	line-height: 0;
+}
+
+#overflow{ /*сркывает все, что находится за пределами этого блока*/
+	width: 100%;
+	overflow: hidden;
+}
+
+article img{ /*размер изображений слайдера*/
+	width: 100%;
+}
+
+#desktop:checked ~ #slider{ /*размер всего слайдера*/
+	max-width: 960px; /*максимальнная длинна*/
+}
+
+
+label, a{ /*при наведении на стрелки или переключатели - курсор изменится*/
+	cursor: pointer;
+}
+
+.all input{ /*скрывает стандартные инпуты (чекбоксы) на странице*/
+	display: none;
+}
+
+/*позиция изображения при активации переключателя*/
+#switch1:checked ~ #slides .image{
+	margin-left: 0;
+}
+
+#switch2:checked ~ #slides .image{
+	margin-left: -100%;
+}
+
+#switch3:checked ~ #slides .image{
+	margin-left: -200%;
+}
+
+#switch4:checked ~ #slides .image{
+	margin-left: -300%;
+}
+
+#switch5:checked ~ #slides .image{
+	margin-left: -400%;
+}
+
+#controls{ /*положение блока всех управляющих элементов*/
+	margin: -25% 0 0 0;
+	width: 100%;
+	height: 50px;
+}
+
+#active label{ /*стиль отдельного переключателя*/
+	border-radius: 10px; /*скругление углов*/
+	display: inline-block; /*расположение в строку*/
+	width: 15px;
+	height: 15px;
+	background: #bbb;
+}
+
+#active{ /*расположение блока с переключателями*/
+	margin: 23% 0 0;
+	text-align: center;
+}
+
+#active label:hover{ /*поведение чекбокса при наведении*/
+	background: #76c8ff;
+	border-color: #777 !important; /*выполнение в любом случае*/
+}
+
+/*цвет активного лейбла при активации чекбокса*/
+#switch1:checked ~ #active label:nth-child(1),
+#switch2:checked ~ #active label:nth-child(2),
+#switch3:checked ~ #active label:nth-child(3),
+#switch4:checked ~ #active label:nth-child(4),
+#switch5:checked ~ #active label:nth-child(5){
+	background: #18a3dd;
+	border-color: #18a3dd !important;
+}
+
+#slides .image{ /*анимация пролистывания изображений*/
+	transition: all 800ms cubic-bezier(0.770, 0.000, 0.175, 1.000);
+}
+
+#controls label:hover{ /*прозрачность стрелок при наведении*/
+	opacity: 0.6;
+}
+
+#controls label{ /*прозрачность стрелок при отводе курсора*/
+	transition: opacity 0.2s ease-out;
+}
+
+@media(max-width:882px){ 
+    .footer__menu{
+        display: flex;
+        column-gap: 20px;
+        flex-direction: column;
+    }
+    .apps{
+        display: flex;
+        column-gap: 5px;
+    }
+    .footer__apps{
+        display: flex;
+        row-gap: 5px;
+    }
+    .footer__img{
+        width: 10px;
+        height: 30px;
+    }
+    .footer__apps > h1{
+        padding-top: 10px;
+    }
+    .column__apps{
+        display: flex;
+        flex-direction: column;
+        row-gap: 2px;
+    }
+    .apps{
+        column-gap: 5px;
+        padding-bottom: 3%;
+    }
+    .for-input{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        row-gap: 10px;
+        padding-top: 15px;
+    }
+    .item__container {
+        flex-wrap: wrap;
+    }
+    input {
+        width: 50%;
+        max-width: 50%;
+    }
+} 
+.item__container{ 
+    display: flex;  
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 30px;
+    padding-top: 70px;
+}  
+.first-row{
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+}
+.for-input{
+    display: flex;
+    flex-direction: column;
+    row-gap: 50px;
+    padding-bottom: 70px;
+}
+input{
+    border: 3px solid rgb(127, 170, 170);
+    border-radius: 20px;
+    background-image: linear-gradient(120deg,#3c3c3c,#585858);
+    color: rgb(127, 170, 170);
+    cursor: pointer;
+    padding: 7px 12px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 17px;
+    transition: all 1s;
+    /* max-width: 170px; */
+    /* font-weight: 400; */
+    font-weight:calc(var(--block)* 2);
+    /* font-size: 14px; */
+    font-size: calc(var(--block)*0.7);
+    /* line-height: 21px; */
+    line-height: calc(var(--block)*1);
+    /* letter-spacing: 0.5px; */
+    letter-spacing: calc(var(--block)*0.1);
+}
+.input:focus {
+    outline-color: rgb(127, 170, 170);
+   }
+   .for__checkbox input {
+    opacity: 0;
+    cursor: pointer;
+    width: 0;
+    height: 0;
+  }
+  
+  .for__checkbox {
+    display: block;
+    position: relative;
+    cursor: pointer;
+    font-size: 20px;
+    user-select: none;
+    width: 30px;
+    height: 30px;
+    border-radius: 3px;
+    background: rgba(216, 216, 216, 0.603);
+  }
+  
+  .for__checkbox:hover {
+    background: rgba(197, 197, 197, 0.527);
+  }
+  
+  .line {
+    width: calc(100% - 8px);
+    height: 3px;
+    left: 4px;
+    background: rgb(58, 58, 58);
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: .7s transform cubic-bezier(0,1,.33,1.2),  .4s;
+  }
+  
+  .line-indicator {
+    transform: translateY(-50%) rotate(90deg);
+  }
+  
+  .container input:checked ~ .line-indicator {
+    transform: translateY(-50%);
+  }
+input::placeholder{
+    text-align: center;
+    text-transform: uppercase;
+    /* font-weight: 400; */
+    font-weight:calc(var(--block)* 2);
+    /* font-size: 14px; */
+    font-size: calc(var(--block)*0.7);
+    /* line-height: 21px; */
+    line-height: calc(var(--block)*1);
+    /* letter-spacing: 0.5px; */
+    letter-spacing: calc(var(--block)*0.1);
+    color: #FFFFFF;
+}
+.amount{
+    width: 30px;
+    height: 30px;
+    background: gray;
+}
+.item__title{
+    font-family:nunito ;
+    /* font-weight: 400; */
+    font-weight: calc(var(--block)* 2);
+    /* font-size: 48px; */
+    font-size: calc(var(--block)*3.2);
+    /* line-height: 58px; */
+    line-height: calc(var(--block)*3);
+    color: #1A1A1A;
+}
+.item__subtitle{
+    color: gray;
+    /* font-weight: 400; */
+    font-weight: calc(var(--block)*2);
+    /* font-size: 32px; */
+    font-size: calc(var(--block)*2);
+    /* line-height: 36px; */
+    line-height: calc(var(--block)*2);
+}
+.img{
+    width: 100%;
+    height: auto;
+}
